@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="authors" content="Florian Murcia">
+
+        <!-- force Internet Explorer à utiliser Microsoft Edge -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- l'affichage sur téléphone devient responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- reset de style -->
+        <link rel="stylesheet" href="../reset.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- style du site -->
+        <link rel="stylesheet" href="../style.css" media="screen">
+
+        <title>Mon Ébéniste - Devis</title>
+    </head>
+    <body>
+
+    <!-- entête -->   
+
+        <header class="header">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-12 pb-2">
+                        <a href="../index.html"><img alt="logo" src="../img/logo.png" width="100" height="75"></a>
+                    </div>
+
+                    <div class="col-12">
+                        <nav>
+                            <ul>
+                                <li><a href="savoir-faire.html">Notre savoir-faire</a></li>
+                                <li><a class="active" href="devis.html">Demande de devis</a></li>
+                                <li><a href="faq-contact.html#faq">FAQ</a></li>
+                                <li><a href="faq-contact.html#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- demande de devis -->
+
+        <section>     
+            <div class="container mt-3">   
+                
+                <div class="text-center">
+                    <h2>
+                        Demande de devis
+                    </h2>
+    
+                    <p>
+                        Vous avez un projet de réalisation ? Laissez vos informations et nous ne manquerons pas de vous recontacter pour en discuter.
+                    </p>    
+                </div>
+                
+
+                <form class="bg-dark-brown p-3 pb-1" action="" method="get" autocomplete="on">
+                    <fieldset>
+                       
+                        <!-- type d'objet -->
+
+                        <div class="row">
+
+                            <div class="col-6">
+                                <label for="object-type-choice" class="form-label" >Object :</label>
+                                <input list="object-type" class="form-control" name="object-type-choice" id="object-type-choice" placeholder="Type d'objet">
+                                <datalist id="object-type">
+                                    <option value="Meuble">Placard, Portail, Chaises ...</option>
+                                    <option value="Escalier">Marches, Ornements</option>
+                                    <option value="Instrument">Instruments de musique</option>
+                                    <option value="Autre">à préciser</option>
+                                </datalist>
+                            </div>
+
+                            <!-- style de l'objet -->
+
+                            <div class="col-6">
+                                <label for="object-style" class="form-label" >Style :</label>
+                                <select name="object-style" class="form-control" id="object-style">
+                                    <option value="Contemporain">Contemporain</option>
+                                    <option value="Ancien" selected>Ancien</option>
+                                    <option value="Style-Autre">Autre</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- détail du projet -->
+
+                        <div class="mb-2">
+                            <label for="project" class="form-label" >Détails du projet* :</label><br>
+                            <textarea name="project" class="form-control" id="project" rows="5" cols="60" wrap="soft" maxlength="100" spellcheck='true' placeholder="Expliquez-nous ce que vous imaginez" required></textarea>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+
+                             <!-- nom -->
+
+                            <div class="col-6">
+                                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Nom*" required>
+                            </div>
+
+                            <!-- prénom -->
+
+                            <div class="col-6">
+                                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Prénom*" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <!-- phone -->
+
+                            <div class="col-6">
+                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone*" required>
+                            </div>
+
+                            <!-- email -->
+
+                            <div class="col-6">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email*" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <!-- address -->
+
+                            <div class="col-8">
+                                <input type="text" class="form-control" name="address" id="address" placeholder="Adresse*" required>
+                            </div>
+                            
+                            <!-- zip -->
+
+                            <div class="col-4">
+                                <input type="text" class="form-control" name="zip" id="zip" placeholder="Code Postale*" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <!-- city -->
+
+                            <div class="col-6">
+                                <input type="text" class="form-control" name="city" id="city" placeholder="Ville*" required>
+                            </div>
+
+                            <!-- country -->
+
+                            <div class="col-6">
+                                <input list="country" class="form-control" name="country-choice" id="country-choice" placeholder="Pays*" required>
+                                <datalist id="country">
+                                    <option value="France">
+                                    <option value="Suisse">
+                                    <option value="Rouyaume-Unis">
+                                    <option value="Espagne">
+                                    <option value="Je vais pas en faire 150, on a compris le principe">
+                                </datalist>
+                            </div>
+
+                        </div>
+
+                        <!-- autorisation des données -->
+
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="data-authorisation" id="data-authorisation" required> J'autorise le traitement de mes données par <strong>Mon Ébéniste</strong> en vue de l'établisement d'un devis et de la relation commerciale qui peut en découler. <a href="politique-de-confidentialite.html">En savoir plus en consultant notre politique de confidentialité.</a>*
+                            </label>
+                        </div>                     
+   
+                        <!-- envoyer -->
+
+                        <div class="form-submit text-center">
+                            <button type="submit" class="btn btn-outline-light" name="submit">Envoyer</button>                  
+                        </div>
+
+                        <p class="text-center"><small>* Champs obligatoire</small></p>
+
+                    </fieldset>
+                </form>
+            </div>
+
+        </section>
+
+    <!-- footer -->
+    
+        <footer>
+            <div class="container"> 
+            <ul class="pb-1">
+                <li><a href="mentions-legales.html">Mentions Légales</a></li>
+                <li><a href="politique-de-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="politique-des-cookies.html">Cookies</a></li>
+            </ul>
+            2022
+            </div>
+        </footer> 
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- script du site -->
+        <script src="../script.js"></script>                  
+    </body>
+</html>
